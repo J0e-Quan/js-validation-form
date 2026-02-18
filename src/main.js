@@ -59,23 +59,24 @@ form.addEventListener('input', (event) => {
     } else {
       hideError(inputName)
     }
-  } else if (inputName === 'pw') {
-    if (event.target.validity.tooShort) {
-      showError(inputName, 'Password must have at least 8 characters!')
-    } else if (event.target.validity.patternMismatch) {
-      showError(inputName, 'Password must contain at least 1 special character and 1 number!')
-    } else {
-      hideError(inputName)
-    }
-  } else if (inputName === 'pw-confirm') {
+  } else if (inputName === 'pw' || inputName === 'pw-confirm') {
     const originalPwInput = document.querySelector('#pw')
     const originalPw = originalPwInput.value
     const pwInput = document.querySelector('#pw-confirm')
     const pw = pwInput.value
+    if (originalPwInput.validity.tooShort) {
+      showError('pw', 'Password must have at least 8 characters!')
+    } else if (originalPwInput.validity.patternMismatch) {
+      showError('pw', 'Password must contain at least 1 special character and 1 number!')
+    } else {
+      hideError('pw')
+    }
     if (pw !== originalPw) {
-      showError(inputName, 'Password does not match!')
-    } else if (pw === originalPw && pwInput.checkValidity()) {
-      hideError(inputName)
+      showError('pw-confirm', 'Password does not match!')
+      pwInput.setCustomValidity('Password does not match!')
+    } else if (pw === originalPw) {
+      pwInput.setCustomValidity('')
+      hideError('pw-confirm')
     }
   }
 })
