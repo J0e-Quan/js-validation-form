@@ -55,3 +55,31 @@ button {
   background-color: none;
   outline: none;
 }
+
+body {
+  padding: 1rem 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 1fr 2fr 0.5fr 1fr 2fr 0.5fr 1fr;
+}
+
+.title {
+  font-size: 5rem;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+label {
+  font-size: 2rem;
+}
+
+input, button {
+  background-color: azure;
+  border: 4px solid gray;
+  border-radius: 24px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
