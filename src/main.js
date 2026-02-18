@@ -40,26 +40,24 @@ function showSuccessMessage() {
 
 form.addEventListener('input', (event) => {
   const inputName = event.target.id
+  updateIsValid()
   if (inputName === 'email') {
     if (!event.target.validity.valid) {
       showError(inputName, 'This is not a valid email! Emails must include @')
     } else {
       hideError(inputName)
-      updateIsValid()
     }
   } else if (inputName === 'country') {
     if (!event.target.validity.valid) {
       showError(inputName, 'Please enter a country name!')
     } else {
       hideError(inputName)
-      updateIsValid()
     }    
   } else if (inputName === 'postal-code') {
     if (!event.target.validity.valid) {
       showError(inputName, 'Please enter a valid postal code!')
     } else {
       hideError(inputName)
-      updateIsValid()
     }
   } else if (inputName === 'pw') {
     if (event.target.validity.tooShort) {
@@ -68,7 +66,6 @@ form.addEventListener('input', (event) => {
       showError(inputName, 'Password must contain at least 1 special character and 1 number!')
     } else {
       hideError(inputName)
-      updateIsValid()
     }
   } else if (inputName === 'pw-confirm') {
     const originalPwInput = document.querySelector('#pw')
@@ -79,7 +76,6 @@ form.addEventListener('input', (event) => {
       showError(inputName, 'Password does not match!')
     } else if (pw === originalPw && pwInput.checkValidity()) {
       hideError(inputName)
-      updateIsValid()
     }
   }
 })
