@@ -52,7 +52,7 @@ form.addEventListener('input', (event) => {
       showError(inputName, 'Please enter a country name!')
     } else {
       hideError(inputName)
-    }    
+    }
   } else if (inputName === 'postal-code') {
     if (!event.target.validity.valid) {
       showError(inputName, 'Please enter a valid postal code!')
