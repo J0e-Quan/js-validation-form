@@ -35,5 +35,35 @@
     <script src="main.js" defer></script>
     <title>js form validation</title>
   </head>
-  <body></body>
+  <body>
+    <div class="grid">
+      <h1 class="title">Registration</h1>
+      <form novalidate>
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+        <label for="country">Country*</label>
+        <input type="text" id="country" name="country" placeholder="Malaysia" required />
+        <label for="postal-code">Postal Code*</label>
+        <input
+          type="tel"
+          id="postal-code"
+          name="postal-code"
+          placeholder="12345"
+          minlength="5"
+          maxlength="5"
+          required
+        />
+        <label for="pw">Password*</label>
+        <input type="password" id="pw" name="pw" placeholder="password123" required />
+        <label for="pw-confirm">Confirm Password*</label>
+        <input
+          type="password"
+          id="pw-confirm"
+          name="pw-confirm"
+          placeholder="password123"
+          required
+        />
+      </form>
+    </div>
+  </body>
 </html>
