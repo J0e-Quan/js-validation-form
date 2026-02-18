@@ -8,7 +8,7 @@ form.addEventListener('input', (target) => {
 })
 submit.addEventListener('click', () => {
   if (isValid === true) {
-    //submit form code here
+    alert('Form details are valid! Thanks for providing your info :)')
   } else {
     alert('Form information is invalid! Please refer to the error boxes for clarification.')
   }
