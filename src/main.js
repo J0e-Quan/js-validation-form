@@ -10,6 +10,6 @@ submit.addEventListener('click', () => {
   if (isValid === true) {
     //submit form code here
   } else {
-    //invalid form code here
+    alert('Form information is invalid! Please refer to the error boxes for clarification.')
   }
 })
