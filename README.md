@@ -1,20 +1,18 @@
 # TEMPLATE-REPO
 
-Template repo for projects.
+Form validation with JavaScript project based on The Odin Project curriculum.
 
 Live demo link:
 
 ## Technologies used:
 
--
+- HTML for basic page layout
+- CSS for styling elements and use of web fonts (Inter for headings, Urbanist for content)
+- JavaScript for validation logic
 - npm and webpack for managing and bundling code modules
 - Git for version control
 
 ## Key features:
-
--
-
-## Credits:
 
 -
 

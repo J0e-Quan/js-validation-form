@@ -65,17 +65,17 @@ body {
   flex-direction: column;
 }
 
-.form-grid {
-  display: grid;
-  grid-column: 1fr 1fr;
-  grid-row: 1fr 1fr 1fr;
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center;
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 3.5rem;
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 0 -3.5rem 2.5rem -3.5rem;
 }
 
 label {
@@ -95,36 +95,8 @@ button {
 section {
   display: flex;
   flex-direction: column;
-}
-
-section.email {
-  grid-row: 1;
-  grid-column: 1;
-}
-
-section.country {
-  grid-row: 1;
-  grid-column: 2;
-}
-
-section.postal-code {
-  grid-row: 2;
-  grid-column: 1;
-}
-
-section.pw {
-  grid-row: 2;
-  grid-column: 2;
-}
-
-section.pw-confirm {
-  grid-row: 3;
-  grid-column: 1;
-}
-
-section.submit {
-  grid-row: 3;
-  grid-column: 2;
+  flex: 1 1 350px;
+  max-width: 350px;
 }
 
 button:hover {
