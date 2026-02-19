@@ -81,6 +81,7 @@ form.addEventListener('input', (event) => {
   }
 })
 submitBtn.addEventListener('click', (btn) => {
+  updateIsValid()
   btn.preventDefault()
   if (isValid === true) {
     hideError('submit')
