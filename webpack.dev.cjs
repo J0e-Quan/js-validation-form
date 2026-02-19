@@ -6,5 +6,13 @@ module.exports = merge(common, {
   devtool: 'eval-source-map',
   devServer: {
     watchFiles: ['./src/index.html']
+  },
+  module: {
+    rules: [
+      {
+        test: /\.s?css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
   }
 })
