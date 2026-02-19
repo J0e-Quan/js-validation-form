@@ -1,8 +1,8 @@
-# TEMPLATE-REPO
+# js-validation-form
 
 Form validation with JavaScript project based on The Odin Project curriculum.
 
-Live demo link:
+Live demo link: https://j0e-quan.github.io/js-validation-form/
 
 ## Technologies used:
 
@@ -14,11 +14,17 @@ Live demo link:
 
 ## Key features:
 
--
+- Form inputs are automatically validated as you type
+- Inputs have informative error boxes if info is invalid
+- Intuitive styles for invalid and valid input boxes
+- Layout is somewhat responsive (using Flexbox) and adjusts according to display width
 
 ## Gallery:
 
-![alt-text](img-path)
+![Picture showing the form being filled up on a wide laptop display](./readme-assets/filling.jpeg)
+![Picture showing submission of valid form data](./readme-assets/valid.jpeg)
+![Picture showing attempt to submit invalid form data](./readme-assets/invalid.jpeg)
+![Picture showing the form being filled up on a narrow mobile display](./readme-assets/mobile.jpeg)
 
 ## Getting started:
 
