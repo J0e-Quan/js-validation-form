@@ -45,7 +45,14 @@
         </section>
         <section class="country">
           <label for="country">Country*</label>
-          <input type="text" id="country" name="country" placeholder="Malaysia" required />
+          <input
+            type="text"
+            id="country"
+            name="country"
+            placeholder="Malaysia"
+            pattern="^[^\d]*$"
+            required
+          />
           <div class="country error-box"></div>
         </section>
         <section class="postal-code">

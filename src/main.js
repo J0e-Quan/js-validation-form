@@ -43,12 +43,17 @@ form.addEventListener('input', (event) => {
   updateIsValid()
   if (inputName === 'email') {
     if (!event.target.validity.valid) {
-      showError(inputName, 'This is not a valid email! Emails must include @')
+      showError(
+        inputName,
+        'This is not a valid email! Emails must include @ and do not contain spaces!'
+      )
     } else {
       hideError(inputName)
     }
   } else if (inputName === 'country') {
-    if (!event.target.validity.valid) {
+    if (event.target.validity.patternMismatch) {
+      showError(inputName, 'Country name cannot include numbers!')
+    } else if (!event.target.validity.valid) {
       showError(inputName, 'Please enter a country name!')
     } else {
       hideError(inputName)
